@@ -38,6 +38,33 @@ app.use(function(req, res, next) {
   next(createError(404))
 })
 
+// error handler
+app.use(function(err, req, res, next) {
+  // set locals, only providing error in development
+  res.locals.message = err.message;
+  res.locals.error = req.app.get('env') === 'development' ? err : {};
+
+  var sess = req.session;
+
+  //console.log(err.status + "-" + err.message); 
+  // render the error page
+  res.status(err.status || 500);
+  if( err.status != null ){
+      res.render('error', { title: req.app.locals.tabTitle }, function (err, html) {
+          html = utility.utilityJS(html, sess);
+          res.send(html);
+      });
+  }
+  else{
+      var resultData = {};
+      resultData.message = err.message;
+      if(!res.headersSent){
+          res.json(resultData);
+      }    
+  }
+  
+});
+
 var port = 6001
 app.listen(port, () => {
   console.log("taskKai is running on port: " + port);
