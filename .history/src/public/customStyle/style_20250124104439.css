@@ -1,0 +1,9 @@
+:root {
+    --background-color: #272727;
+    --primary-color: #747474;
+    --secondary-color: #ff652f;
+    --third-color: #ff652f;
+    --fourth-color: #ff652f;
+    --font-family: 'Roboto', sans-serif;
+    --spacing: 16px;
+}
