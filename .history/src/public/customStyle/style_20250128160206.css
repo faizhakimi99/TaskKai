@@ -30,6 +30,8 @@ body {
     cursor: pointer;
 }
 
-.material-icon {
-    cursor: pointer;
+.header-text-box {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 }
