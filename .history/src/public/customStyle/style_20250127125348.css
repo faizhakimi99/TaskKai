@@ -1,0 +1,27 @@
+:root {
+    --background-color: #272727;
+    --primary-color: #747474;
+    --secondary-color: #ff652f;
+    --third-color: #ffe400;
+    --fourth-color: #14a76c;
+    --font-family: 'Roboto', sans-serif;
+    --spacing: 16px;
+}
+
+body {
+    font-size: 16px;
+    font-family: var(--font-family);
+    color: var(--primary-color);
+    background-color: var(--background-color);
+}
+
+.custom-margin-container {
+    margin-left: 100px;
+    margin-right: 100px;
+}
+
+.card-bg {
+    background-color: var(--background-color);
+    border-color: var(--secondary-color);
+    color: var(--primary-color);
+}
